@@ -144,10 +144,6 @@ button {
 }
 
 
-/*
-   Curved section transitions.
-*/
-
 .section-dark::before {
     content: "";
     position: absolute;
@@ -2625,6 +2621,70 @@ button {
 }
 
 
+/* =========================================================
+   FOOTER SOCIAL LINKS
+========================================================= */
+
+.footer-socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.footer-socials a {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+
+    color: var(--beige);
+
+    font-size: 0.95rem;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.footer-socials a:hover {
+    transform: translateY(-4px);
+
+    background: var(--beige);
+
+    color: var(--black);
+
+    border-color: var(--beige);
+}
+
+
+.footer-socials a:focus-visible {
+    outline: 2px solid var(--beige-light);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
 .footer-bottom {
     display: flex;
     align-items: center;
@@ -2705,6 +2765,13 @@ button {
     transform: translateY(-5px);
 
     background: var(--black);
+}
+
+
+.whatsapp-float:focus-visible {
+    outline: 2px solid #25d366;
+
+    outline-offset: 4px;
 }
 
 
@@ -3128,6 +3195,11 @@ html.js-enabled .reveal.visible {
     }
 
 
+    .footer-socials {
+        margin-top: 22px;
+    }
+
+
     .whatsapp-float {
         right: 15px;
         bottom: 15px;
@@ -3330,6 +3402,12 @@ html.js-enabled .reveal.visible {
 
     .contact-bar strong {
         font-size: 1.45rem;
+    }
+
+
+    .footer-socials a {
+        width: 40px;
+        height: 40px;
     }
 
 }
