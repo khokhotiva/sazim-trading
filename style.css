@@ -760,7 +760,7 @@ button {
 
 /* =========================================================
    13. PROBLEM SECTION
-========================================================= 
+========================================================= */
 
 .problem-section {
     position: relative;
@@ -775,7 +775,7 @@ button {
 }
 
 
-/* CONTENT GRID 
+
 
 .problem-grid {
     display: grid;
@@ -790,7 +790,7 @@ button {
 }
 
 
-/* LEFT SIDE 
+
 
 .problem-heading {
     position: relative;
@@ -847,7 +847,7 @@ button {
 }
 
 
-/* RIGHT SIDE 
+
 
 .problem-content {
     max-width: 500px;
@@ -874,7 +874,7 @@ button {
 }
 
 
-/* BUTTON *
+
 
 .problem-content .btn-light {
     display: inline-flex;
@@ -888,10 +888,10 @@ button {
 .problem-content .btn-light:hover {
     background: var(--beige);
     color: var(--black);
-}*/
+}
 
 
-/* =========================================================
+ /*=========================================================
    14. STATS
 ========================================================= */
 
@@ -963,7 +963,7 @@ button {
 }
 
 
-/* =========================================================
+ /*=========================================================
    15. ABOUT
 ========================================================= */
 
@@ -3488,4 +3488,64 @@ html.js-enabled .reveal.visible {
         transform: none !important;
     }
 
+}
+
+/* =========================================================
+   FIX: Remove black gap between intro and homeowners section
+========================================================= *
+
+.problem-section::before {
+    display: none;
+}
+
+.stats-section {
+    margin-top: 0;
+    border-radius: 0 0 45px 45px;
+}*/
+
+/* =========================================================
+   FIX: Content visibility on dark sections
+========================================================= */
+
+/* Fix problem section content sitting above the curved cap */
+.problem-section::before {
+    z-index: 0;
+}
+
+.problem-grid {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix stats section content visibility */
+.stats-grid {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix hero text visibility */
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 3;
+}
+
+/* Fix scroll indicator visibility */
+.scroll-indicator {
+    z-index: 3;
+}
+
+.logo img {
+    display: block;
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-logo img {
+    width: 150px;
 }
