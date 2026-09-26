@@ -3549,3 +3549,15 @@ html.js-enabled .reveal.visible {
 .footer-logo img {
     width: 150px;
 }
+
+/* =========================================================
+   FIX ONLY: SHOW PROBLEM SECTION + STATS CONTENT
+   Keeps all original sizing, borders, spacing and images.
+========================================================= */
+
+.problem-heading.reveal,
+.problem-content.reveal,
+.stat-item.reveal {
+    opacity: 1;
+    transform: none;
+}
